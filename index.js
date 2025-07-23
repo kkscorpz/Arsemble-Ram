@@ -70,7 +70,7 @@ app.post('/webhook', (req, res) => {
   }
 
   if (intent === 'Get_RAM_Kingston_FURY_Beast_DDR4_Details') {
-    const ramModelRaw = parameters.ram_model;
+    const ramModelRaw = parameters["ram-model"];
     if (!ramModelRaw) {
       return res.json({ fulfillmentText: 'Please specify the RAM model.' });
     }
